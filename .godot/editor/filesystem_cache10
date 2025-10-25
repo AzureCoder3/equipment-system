@@ -1,6 +1,13 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1761292290
-game.tscn::PackedScene::4539599258600399664::1761291979::0::1::::<><><>0<>0<><>::
+::res://::1761395841
 icon.svg::CompressedTexture2D::8349826155298439465::1761291979::1761292291::1::::<><><>0<>0<>2e27b111e05aa2f1e6c50d60e092fa3a<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-node_2d.tscn::PackedScene::3371563427734066197::1761291979::0::1::::<><><>0<>0<><>::uid://b2xmes3liap7f::::res://tilemap.png
-README.md::TextFile::-1::1761291979::0::1::::<><><>0<>0<><>::
+README.md::TextFile::-1::1761305362::0::1::::<><><>0<>0<><>::
+::res://Battle System/::1761305432
+::res://Battle System/Scenes/::1761381885
+player.tscn::PackedScene::4527827429617770849::1761381885::0::1::::<><><>0<>0<><>::uid://c0oo560yox3p::::res://Battle System/Scripts/character_body_2d.gd<>uid://b3e8jhf33mj7l::::res://Battle System/Scripts/Components/healthComponent.gd<>uid://dq7yof48sds7j::::res://icon.svg
+testmain.tscn::PackedScene::2537746296523969843::1761381590::0::1::::<><><>0<>0<><>::uid://b5rkwku6yyfuf::::res://Battle System/Scenes/player.tscn
+::res://Battle System/Scripts/::1761381572
+character_body_2d.gd::GDScript::192863794898934899::1761381572::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Battle System/Scripts/Components/::1761381885
+attackComponent.gd::GDScript::4765359654788340559::1761348321::0::1::::Attack<>Node<><>0<>0<><>::
+healthComponent.gd::GDScript::4361985926178249807::1761381885::0::1::::Health<>Node<><>0<>0<><>::
