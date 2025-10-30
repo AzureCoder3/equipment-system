@@ -1,0 +1,181 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0wlusuww2btx"]
+
+[ext_resource type="Script" uid="uid://4umar5rky7xn" path="res://scripts/equipmentui.gd" id="1_7iav0"]
+[ext_resource type="Texture2D" uid="uid://c5c0tpd71tkk1" path="res://assets/slot_temporary.svg" id="2_7n6j2"]
+[ext_resource type="Texture2D" uid="uid://h5g14fhlmy71" path="res://assets/hey.jpg" id="3_ctrmh"]
+[ext_resource type="Script" uid="uid://c0kuncoa5h65r" path="res://scripts/margin_container.gd" id="4_oemha"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oemha"]
+size = Vector2(165, 142)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oemha"]
+radius = 50.039986
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7iav0")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.35990003, 0.5141283, 0.61, 1)
+
+[node name="EquipmentSlotsContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = -490.0
+offset_right = 233.0
+offset_bottom = 490.0
+grow_vertical = 2
+theme_override_constants/separation = 48
+
+[node name="EquipmentSlot1" type="TextureRect" parent="EquipmentSlotsContainer"]
+layout_mode = 2
+texture = ExtResource("2_7n6j2")
+
+[node name="Slot1" type="Area2D" parent="EquipmentSlotsContainer/EquipmentSlot1"]
+position = Vector2(10, 8)
+
+[node name="CollisionShape2D1" type="CollisionShape2D" parent="EquipmentSlotsContainer/EquipmentSlot1/Slot1"]
+position = Vector2(81.5, 72)
+shape = SubResource("RectangleShape2D_oemha")
+
+[node name="EquipmentSlot2" type="TextureRect" parent="EquipmentSlotsContainer"]
+layout_mode = 2
+texture = ExtResource("2_7n6j2")
+
+[node name="Slot2" type="Area2D" parent="EquipmentSlotsContainer/EquipmentSlot2"]
+position = Vector2(8, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EquipmentSlotsContainer/EquipmentSlot2/Slot2"]
+position = Vector2(81.5, 72)
+shape = SubResource("RectangleShape2D_oemha")
+
+[node name="EquipmentSlot3" type="TextureRect" parent="EquipmentSlotsContainer"]
+layout_mode = 2
+texture = ExtResource("2_7n6j2")
+
+[node name="Slot3" type="Area2D" parent="EquipmentSlotsContainer/EquipmentSlot3"]
+position = Vector2(12, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EquipmentSlotsContainer/EquipmentSlot3/Slot3"]
+position = Vector2(81.5, 72)
+shape = SubResource("RectangleShape2D_oemha")
+
+[node name="EquipmentSlot4" type="TextureRect" parent="EquipmentSlotsContainer"]
+layout_mode = 2
+texture = ExtResource("2_7n6j2")
+
+[node name="Slot4" type="Area2D" parent="EquipmentSlotsContainer/EquipmentSlot4"]
+position = Vector2(11, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EquipmentSlotsContainer/EquipmentSlot4/Slot4"]
+position = Vector2(81.5, 72)
+shape = SubResource("RectangleShape2D_oemha")
+
+[node name="EquipmentSlot5" type="TextureRect" parent="EquipmentSlotsContainer"]
+layout_mode = 2
+texture = ExtResource("2_7n6j2")
+
+[node name="Slot5" type="Area2D" parent="EquipmentSlotsContainer/EquipmentSlot5"]
+position = Vector2(11, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EquipmentSlotsContainer/EquipmentSlot5/Slot5"]
+position = Vector2(81.5, 72)
+shape = SubResource("RectangleShape2D_oemha")
+
+[node name="MainCharacter" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -457.0
+offset_top = -423.0
+offset_right = -57.0
+offset_bottom = 434.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ctrmh")
+
+[node name="EquipmentMenu" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -709.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="EquipmentMenuBG" type="ColorRect" parent="EquipmentMenu"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.2576, 0.3857867, 0.46, 0.5647059)
+
+[node name="MarginContainer" type="MarginContainer" parent="EquipmentMenu"]
+layout_mode = 2
+script = ExtResource("4_oemha")
+
+[node name="Equipments" type="GridContainer" parent="EquipmentMenu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 4
+
+[node name="Equipment1" type="TextureRect" parent="EquipmentMenu/MarginContainer/Equipments"]
+modulate = Color(1.8618574, 2.0325725, 1.8463379, 1)
+layout_mode = 2
+texture = ExtResource("2_7n6j2")
+
+[node name="EquipmentSlot1" type="Area2D" parent="EquipmentMenu/MarginContainer/Equipments/Equipment1"]
+position = Vector2(9, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EquipmentMenu/MarginContainer/Equipments/Equipment1/EquipmentSlot1"]
+position = Vector2(68, 72)
+shape = SubResource("CircleShape2D_oemha")
+
+[node name="Equipment2" type="TextureRect" parent="EquipmentMenu/MarginContainer/Equipments"]
+modulate = Color(1.8618574, 2.0325725, 1.8463379, 1)
+layout_mode = 2
+texture = ExtResource("2_7n6j2")
+
+[node name="EquipmentSlot2" type="Area2D" parent="EquipmentMenu/MarginContainer/Equipments/Equipment2"]
+position = Vector2(10, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EquipmentMenu/MarginContainer/Equipments/Equipment2/EquipmentSlot2"]
+position = Vector2(68, 72)
+shape = SubResource("CircleShape2D_oemha")
+
+[node name="Equipment3" type="TextureRect" parent="EquipmentMenu/MarginContainer/Equipments"]
+modulate = Color(1.8618574, 2.0325725, 1.8463379, 1)
+layout_mode = 2
+texture = ExtResource("2_7n6j2")
+
+[node name="EquipmentSlot3" type="Area2D" parent="EquipmentMenu/MarginContainer/Equipments/Equipment3"]
+position = Vector2(9, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EquipmentMenu/MarginContainer/Equipments/Equipment3/EquipmentSlot3"]
+position = Vector2(68, 72)
+shape = SubResource("CircleShape2D_oemha")
+
+[connection signal="mouse_entered" from="EquipmentMenu/MarginContainer/Equipments/Equipment1" to="." method="_on_equipment_1_mouse_entered"]
+[connection signal="mouse_exited" from="EquipmentMenu/MarginContainer/Equipments/Equipment1" to="." method="_on_equipment_1_mouse_exited"]
+[connection signal="mouse_entered" from="EquipmentMenu/MarginContainer/Equipments/Equipment2" to="." method="_on_equipment_2_mouse_entered"]
+[connection signal="mouse_exited" from="EquipmentMenu/MarginContainer/Equipments/Equipment2" to="." method="_on_equipment_2_mouse_exited"]
+[connection signal="mouse_entered" from="EquipmentMenu/MarginContainer/Equipments/Equipment3" to="." method="_on_equipment_3_mouse_entered"]
+[connection signal="mouse_exited" from="EquipmentMenu/MarginContainer/Equipments/Equipment3" to="." method="_on_equipment_3_mouse_exited"]
