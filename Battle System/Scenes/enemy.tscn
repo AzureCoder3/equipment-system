@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnmojy876sog"]
+
+[ext_resource type="Script" uid="uid://b3e8jhf33mj7l" path="res://Battle System/Scripts/Components/healthComponent.gd" id="1_4gq2o"]
+[ext_resource type="Texture2D" uid="uid://dq7yof48sds7j" path="res://icon.svg" id="2_7aar0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hdyat"]
+radius = 64.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Health" type="Node" parent="."]
+script = ExtResource("1_4gq2o")
+metadata/_custom_type_script = "uid://b3e8jhf33mj7l"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hdyat")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_7aar0")

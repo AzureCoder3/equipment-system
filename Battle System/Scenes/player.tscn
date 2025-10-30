@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5rkwku6yyfuf"]
+
+[ext_resource type="Script" uid="uid://c0oo560yox3p" path="res://Battle System/Scripts/character_body_2d.gd" id="1_iugqi"]
+[ext_resource type="Script" uid="uid://b3e8jhf33mj7l" path="res://Battle System/Scripts/Components/healthComponent.gd" id="2_rragm"]
+[ext_resource type="Texture2D" uid="uid://dq7yof48sds7j" path="res://icon.svg" id="3_qhw4u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g14j6"]
+radius = 65.0
+height = 130.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_iugqi")
+
+[node name="Health" type="Node" parent="."]
+script = ExtResource("2_rragm")
+max_health = 22
+metadata/_custom_type_script = "uid://b3e8jhf33mj7l"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_g14j6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_qhw4u")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -46.0
+offset_top = -107.0
+offset_right = 46.0
+offset_bottom = -78.0
+text = "placeholder"
+horizontal_alignment = 1
+vertical_alignment = 1
